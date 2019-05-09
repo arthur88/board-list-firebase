@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './App.css';
 import firebase from './Firebase';
 
-class App extends Component {
+export default class App extends Component {
 
   constructor(props) {
     super(propss);
@@ -69,5 +69,3 @@ class App extends Component {
   }
 
 }
-
-export default App;
