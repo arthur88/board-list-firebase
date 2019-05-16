@@ -6,7 +6,7 @@ import firebase from './Firebase';
 export default class App extends Component {
 
   constructor(props) {
-    super(propss);
+    super(props);
     this.ref = firebase.firestore().collection('boards');
     this.unsubscribe = null;
     this.state = {
@@ -54,7 +54,7 @@ export default class App extends Component {
                 <tbody>
                   {this.state.boards.map(board => 
                     <tr>
-                      <td><Link to={'/show/${board.key}'}>{board.title}</Link></td>
+                      <td><Link to={`/show/${board.key}`}>{board.title}</Link></td>
                       <td>{ board.description }</td>
                       <td>{ board.author }</td>
                     </tr>

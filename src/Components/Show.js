@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import firebase from '../Firebase';
 import { Link } from 'react-router-dom';
 
@@ -53,11 +53,11 @@ export default class Show extends Component {
                         <dt>Author:</dt>
                         <dd>{ this.state.board.author }</dd>
                     </dl>
-                    <Link to={'/edit/${this.state.key}'} className="btn btn-success">Edit</Link>
+                    <Link to={`/edit/${this.state.key}`} className="btn btn-success">Edit</Link>
                     &nbsp;
                     <button onClick={this.delete.bind(this, this.state.key)} class="btn btn-danger">Delete</button>
                 </div>
             </div></div>
-        )
+        ) 
     }
 }
